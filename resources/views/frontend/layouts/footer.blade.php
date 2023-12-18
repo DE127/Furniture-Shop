@@ -78,9 +78,7 @@
 							</div>
 						</div>
 						<div class="col-lg-6 col-12">
-							<div class="right">
-								<img src="{{asset('backend/img/payments.png')}}" alt="#">
-							</div>
+							
 						</div>
 					</div>
 				</div>

@@ -370,7 +370,7 @@
 	.filter_button{
         /* height:20px; */
         text-align: center;
-        background:#F7941D;
+        background:#7a7a7a;
         padding:8px 16px;
         margin-top:10px;
         color: white;

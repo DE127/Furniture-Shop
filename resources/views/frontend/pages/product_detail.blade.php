@@ -507,7 +507,7 @@
 		float: right;
 		padding-left: 2px;
 		cursor: pointer;
-		color: #F7941D;
+		color: #7a7a7a;
 		font-size: 16px;
 		margin-top: 5px;
 		}
