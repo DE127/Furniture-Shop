@@ -9,7 +9,7 @@
         {{csrf_field()}}
         <div class="form-group">
           <label for="inputTitle" class="col-form-label">Title <span class="text-danger">*</span></label>
-          <input id="inputTitle" type="text" name="title" placeholder="Enter title"  value="{{old('title')}}" class="form-control">
+          <input id="inputTitle" type="text" name="title" placeholder="Enter title"  value="{{old('title')}}" class="form-control" required>
           @error('title')
           <span class="text-danger">{{$message}}</span>
           @enderror
@@ -17,7 +17,7 @@
 
         <div class="form-group">
           <label for="summary" class="col-form-label">Summary <span class="text-danger">*</span></label>
-          <textarea class="form-control" id="summary" name="summary">{{old('summary')}}</textarea>
+          <textarea class="form-control" id="summary" name="summary" required>{{old('summary')}}</textarea>
           @error('summary')
           <span class="text-danger">{{$message}}</span>
           @enderror
@@ -25,7 +25,7 @@
 
         <div class="form-group">
           <label for="description" class="col-form-label">Description</label>
-          <textarea class="form-control" id="description" name="description">{{old('description')}}</textarea>
+          <textarea class="form-control" id="description" name="description" required>{{old('description')}}</textarea>
           @error('description')
           <span class="text-danger">{{$message}}</span>
           @enderror
@@ -40,7 +40,7 @@
 
         <div class="form-group">
           <label for="cat_id">Category <span class="text-danger">*</span></label>
-          <select name="cat_id" id="cat_id" class="form-control">
+          <select name="cat_id" id="cat_id" class="form-control" required>
               <option value="">--Select any category--</option>
               @foreach($categories as $key=>$cat_data)
                   <option value='{{$cat_data->id}}'>{{$cat_data->title}}</option>
@@ -60,7 +60,7 @@
 
         <div class="form-group">
           <label for="price" class="col-form-label">Price(NRS) <span class="text-danger">*</span></label>
-          <input id="price" type="number" name="price" placeholder="Enter price"  value="{{old('price')}}" class="form-control">
+          <input id="price" type="number" name="price" placeholder="Enter price"  value="{{old('price')}}" class="form-control" required>
           @error('price')
           <span class="text-danger">{{$message}}</span>
           @enderror
@@ -68,27 +68,17 @@
 
         <div class="form-group">
           <label for="discount" class="col-form-label">Discount(%)</label>
-          <input id="discount" type="number" name="discount" min="0" max="100" placeholder="Enter discount"  value="{{old('discount')}}" class="form-control">
+          <input id="discount" type="number" name="discount" min="0" max="100" placeholder="Enter discount"  value="{{old('discount')}}" class="form-control" required>
           @error('discount')
           <span class="text-danger">{{$message}}</span>
           @enderror
-        </div>
-        <div class="form-group">
-          <label for="size">Size</label>
-          <select name="size[]" class="form-control selectpicker"  multiple data-live-search="true">
-              <option value="">--Select any size--</option>
-              <option value="S">Small (S)</option>
-              <option value="M">Medium (M)</option>
-              <option value="L">Large (L)</option>
-              <option value="XL">Extra Large (XL)</option>
-          </select>
         </div>
 
         <div class="form-group">
           <label for="brand_id">Brand</label>
           {{-- {{$brands}} --}}
 
-          <select name="brand_id" class="form-control">
+          <select name="brand_id" class="form-control" required>
               <option value="">--Select Brand--</option>
              @foreach($brands as $brand)
               <option value="{{$brand->id}}">{{$brand->title}}</option>
@@ -98,7 +88,7 @@
 
         <div class="form-group">
           <label for="condition">Condition</label>
-          <select name="condition" class="form-control">
+          <select name="condition" class="form-control" required>
               <option value="">--Select Condition--</option>
               <option value="default">Default</option>
               <option value="new">New</option>
@@ -108,7 +98,7 @@
 
         <div class="form-group">
           <label for="stock">Quantity <span class="text-danger">*</span></label>
-          <input id="quantity" type="number" name="stock" min="0" placeholder="Enter quantity"  value="{{old('stock')}}" class="form-control">
+          <input id="quantity" type="number" name="stock" min="0" placeholder="Enter quantity"  value="{{old('stock')}}" class="form-control" required>
           @error('stock')
           <span class="text-danger">{{$message}}</span>
           @enderror
@@ -131,7 +121,7 @@
         
         <div class="form-group">
           <label for="status" class="col-form-label">Status <span class="text-danger">*</span></label>
-          <select name="status" class="form-control">
+          <select name="status" class="form-control" required>
               <option value="active">Active</option>
               <option value="inactive">Inactive</option>
           </select>

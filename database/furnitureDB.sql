@@ -59,7 +59,8 @@ CREATE TABLE `brands`  (
 -- ----------------------------
 -- Records of brands
 -- ----------------------------
-
+-- brand_id = 1
+INSERT INTO `brands` VALUES (1, 'Undefined', 'undefined', 'active', '2020-08-14 08:49:03', '2020-08-14 08:49:03');
 -- ----------------------------
 -- Table structure for carts
 -- ----------------------------
@@ -115,7 +116,10 @@ CREATE TABLE `categories`  (
 -- ----------------------------
 -- Records of categories
 -- ----------------------------
-
+-- category_id = 1 undefined
+INSERT INTO `categories` VALUES (1, 'Undefined', 'undefined', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptate.', '/storage/photos/1/Category/category-01.jpg', 1, NULL, 1, 'active', '2020-08-14 08:48:48', '2020-08-14 08:48:48');
+-- category_id = 2 undefined child
+INSERT INTO `categories` VALUES (2, 'Undefined Child', 'undefined-child', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptate.', '/storage/photos/1/Category/category-02.jpg', 0, 1, 1, 'active', '2020-08-14 08:49:03', '2020-08-14 08:49:03');
 -- ----------------------------
 -- Table structure for coupons
 -- ----------------------------

@@ -24,7 +24,6 @@
               <th>Is Featured</th>
               <th>Price</th>
               <th>Discount</th>
-              <th>Size</th>
               <th>Condition</th>
               <th>Brand</th>
               <th>Stock</th>
@@ -41,7 +40,6 @@
               <th>Is Featured</th>
               <th>Price</th>
               <th>Discount</th>
-              <th>Size</th>
               <th>Condition</th>
               <th>Brand</th>
               <th>Stock</th>
@@ -69,7 +67,6 @@
                     <td>{{(($product->is_featured==1)? 'Yes': 'No')}}</td>
                     <td>Rs. {{$product->price}} /-</td>
                     <td>  {{$product->discount}}% OFF</td>
-                    <td>{{$product->size}}</td>
                     <td>{{$product->condition}}</td>
                     <td> {{ucfirst($product->brand->title)}}</td>
                     <td>
